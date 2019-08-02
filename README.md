@@ -1,3 +1,30 @@
+# Windows 설치
+ * 기본적으로 윈도우에서 실행은 불가능하지만 시그윈(Cygwin), WSL(Windows Subsystem for Linux) 등을 이용하여 설치 및 실행 가능
+ * 그러나 성능 면에서 해당 방법으로 컴파일 하는 것은 매우 비효율적임
+
+# Linux(Ubuntu) 설치
+ * 설명을 위해 윈도우 10 기능인 WSL 환경에서 설치 및 실행
+ ![우분투 실행 화면](https://github.com/aasdzs/Daredevil/blob/master/captures/01_install_ubuntu.PNG?raw=true)
+ * git을 통해 Daredevil 코드를 복사함 (https://github.com/SideChannelMarvels/Daredevil)
+ ![소스복사](https://github.com/aasdzs/Daredevil/blob/master/captures/02_git_clone_daredevil.PNG?raw=true)
+   - git 설치안되어있으면 `apt-get install git` 명령어로 설치
+   - git 명령어 `git clone https://github.com/SideChannelMarvels/Daredevil.git`
+ * compiler with OpenMP support (by default clang) 설치 
+   - 명령어 `sudo apt-get install --no-install-recommends clang make libomp-dev`
+   ![컴파일러 설치](https://github.com/aasdzs/Daredevil/blob/master/captures/05_install_daredevil-2.PNG?raw=true)
+   - 명령어 오류 시 `sudo apt-get upgrade` 및 `sudo apt-get update` 명령어 입력
+   ![컴파일러 설치 오류](https://github.com/aasdzs/Daredevil/blob/master/captures/05_install_daredevil-1.PNG?raw=true)
+   ![설치 오류 시 대응](https://github.com/aasdzs/Daredevil/blob/master/captures/03_apt-get_upgrade.PNG?raw=true)
+   ![설치 오류 시 대응](https://github.com/aasdzs/Daredevil/blob/master/captures/04_apt-get_update.PNG?raw=true)
+   
+ * Daredevil 컴파일 및 설치
+   - `make` 명령어 입력 후 컴파일 확인 
+   ![컴파일러 설치](https://github.com/aasdzs/Daredevil/blob/master/captures/06_make_daredevil.PNG?raw=true)
+   - `sudo make install` 명령어 입력 후 daredevil 파일 생성 확인
+   ![컴파일러 설치](https://github.com/aasdzs/Daredevil/blob/master/captures/07_make_install_daredevil.PNG?raw=true)
+   
+---
+
 # Daredevil
 *His senses function with superhuman accuracy and sensitivity, giving him abilities far beyond the limits of a sighted person*
 
